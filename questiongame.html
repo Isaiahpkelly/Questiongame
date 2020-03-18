@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var intro = prompt("Please enter you name");
+        alert("Hello " + intro)
+        alert(intro + " There wil be 10 questions \nto test your knowledge of me");
+        alert("Press ok for Yes \nPress cancel for No");
+
+        var aboutMe = [
+            { q: "Fav food is Mexican?", a: "t" },
+            { q: "Fav movie is The Hulk", a: "f" },
+            { q: "Fav color is red?", a: "t" },
+            { q: "Fav pet is a cat?", a: "f" },
+            { q: "Fav season is winter?", a: "f" },
+            { q: "Fav car is BMW?", a: "t" },
+            { q: "Fav animal is a Bull?", a: "f" },
+            { q: "Fav sport is hockey?", a: "f" },
+            { q: "Fav boxer is Errol Spence Jr?", a: "t" },
+            { q: "Fav artist is Usher?", a: "t" }
+        ];
+
+        var score = 0;
+        var wrong = 0;
+        for (var i = 0; i < aboutMe.length; i++) {
+
+
+            var answer = confirm(aboutMe[i].q);
+
+            if ((answer === true && aboutMe[i].a === "t") ||
+                (answer === false && aboutMe[i].a === "f")) {
+                score++;
+                alert("Correct answer!");
+            }
+            else {
+                wrong++;
+                alert("Wrong answer!");
+
+            }
+            alert("You got " + score + "/" + aboutMe.length + " correct");
+            alert("You got " + wrong + "/" + aboutMe.length + " wrong");
+
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
